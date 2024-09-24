@@ -1,0 +1,6 @@
+Flask
+Flask-RESTful
+pandas
+snakemake
+vcfpy
+requests
