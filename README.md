@@ -1,4 +1,4 @@
-# dasa
+# Dasa
 Repository for Dasa Challenge
 
 Bioinformatics Pipeline Implementation Challenge
