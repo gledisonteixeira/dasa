@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtro de Variantes</title>
+</head>
+<body>
+    <h1>Filtrar Variantes</h1>
+    <label for="frequency">Frequência:</label>
+    <input type="text" id="frequency">
+    <label for="dp">Profundidade (DP):</label>
+    <input type="text" id="dp">
+    <button onclick="fetchVariants()">Filtrar</button>
+    <div id="results"></div>
+
+    <script>
+        async function fetchVariants() {
+            const frequency = document.getElementById('frequency').value;
+            const dp = document.getElementById('dp').value;
+            const response = await fetch(`/variants?frequency=${frequency}&dp=${dp}`);
+            const data = await response.json();
+            document.getElementById('results').innerHTML = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+</html>
